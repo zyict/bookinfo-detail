@@ -1,0 +1,8 @@
+services:
+  details:
+    build: .
+    image: ghcr.io/zyict/bookinfo-details
+    ports:
+      - "9080:9080"
+    environment:
+      SERVICE_VERSION: v1
