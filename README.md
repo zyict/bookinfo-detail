@@ -7,3 +7,9 @@
 ```bash
 ruby details.rb 9080
 ```
+
+## How to run with Docker
+
+```bash
+docker-compose up
+```
