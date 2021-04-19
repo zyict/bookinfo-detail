@@ -1,0 +1,15 @@
+details:
+  namespace: student39-bookinfo-uat
+  image: ghcr.io/zyict/bookinfo-details
+  tag: uat
+  replicas: 1
+  imagePullSecrets: registry-bookinfo
+  port: 9080
+  healthCheckPath: "/health"
+ingress:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  host: bookinfo.uat.opsta.net
+  path: "/student39/details(/|$)(.*)"
+  serviceType: ClusterIP
